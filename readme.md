@@ -17,3 +17,5 @@ password=securepassowrd
 projectid=yourprojectid
 ```
 3. Run `npm start`
+## LICENCE  
+MIT Licence.
