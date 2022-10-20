@@ -1,6 +1,9 @@
 # Scratch Live Follower  
 Scratchのプロジェクトのサムネイルを定期的に変更することによって自分のフォロワー数を表示します。  
 This project will show us LIVE follower count by changing Scratch project's thumbnail periodic.  
+
+## requirement
+Node.js 18.0+  
 ## Usage
 1. Download files
 ```
