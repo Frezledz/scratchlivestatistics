@@ -21,4 +21,4 @@ projectid=yourprojectid
 MIT Licence.
 ## NOTE
 1000秒に1回の頻度で変更されます。Replitなどで24時間実行させておくといいでしょう。  
-Thumbnail will be changed once in 1000 seconds. I recoomends you to run this on replit or something to run 24/7.
+Thumbnail will be changed once in 1000 seconds. I recoomend you to run this on replit or something to run 24/7.
