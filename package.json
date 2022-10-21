@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node": "^18.11.0"
+    "node": "^16.14.2"
   },
   "type": "commonjs",
   "dependencies": {
