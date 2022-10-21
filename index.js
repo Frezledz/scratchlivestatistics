@@ -13,6 +13,7 @@ const _setthumb = async() =>{
       
 }
 
+_setthumb();
 
 setInterval(() => {
     _setthumb();
