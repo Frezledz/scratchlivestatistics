@@ -21,7 +21,7 @@ projectid=yourprojectid
 MIT Licence.
 ## NOTE
 1000秒に1回の頻度で変更されます。サーバー上で24時間実行させておくといいでしょう。(Replit上ではScratch apiの都合で動きません。)  
-Thumbnail will be changed once in 1000 seconds. I recoomend you to run this on replit or something to run 24/7.(It doesn't work on Replit due to scratch api's problems.)  
+Thumbnail will be changed once in 1000 seconds. I recoomend you to run this on Heroku or something to run 24/7.(It doesn't work on Replit due to scratch api's problems.)  
 
 ## Credit
 [https://dummyimage.com](https://dummyimage.com) - instant image generating tool

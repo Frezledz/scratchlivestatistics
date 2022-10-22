@@ -17,6 +17,7 @@ const login = (name,pass)=>{
       const req = https.request(reqoptions, res => {
   
           res.on('data', () => {
+            console.log(res.statusMessage);
             for(c of res.rawHeaders){
               if(c.includes("scratchsessionsid")){
                 resolve(c.match(/\"(.*)\"/g)[0]);
