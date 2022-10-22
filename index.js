@@ -26,5 +26,8 @@ const task = ()=>{
 }
 task();
 
+setInterval(() => {
+    task();
+}, 1000000);
 
 
