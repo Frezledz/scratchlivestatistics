@@ -3,7 +3,7 @@ Scratchのプロジェクトのサムネイルを定期的に変更すること�
 This project will show us LIVE follower count by changing Scratch project's thumbnail periodic.  
 
 ## requirement
-Node.js 18.0+  
+Node.js (it should work on widely used version./よく使われてバージョンなら大体動くはずです。)
 ## Usage
 1. Download files
 ```
