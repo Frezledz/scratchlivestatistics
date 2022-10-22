@@ -3,7 +3,7 @@ Scratchのプロジェクトのサムネイルを定期的に変更すること�
 This project will show us LIVE follower count by changing Scratch project's thumbnail periodic.  
 
 ## requirement
-Node.js (it should work on widely used version./よく使われてバージョンなら大体動くはずです。)
+Node.js (it should work on widely used version./よく使われているバージョンなら大体動くはずです。)
 ## Usage
 1. Download files
 ```
@@ -20,5 +20,8 @@ projectid=yourprojectid
 ## LICENCE  
 MIT Licence.
 ## NOTE
-1000秒に1回の頻度で変更されます。Replitなどで24時間実行させておくといいでしょう。  
-Thumbnail will be changed once in 1000 seconds. I recoomend you to run this on replit or something to run 24/7.
+1000秒に1回の頻度で変更されます。サーバー上で24時間実行させておくといいでしょう。(Replit上ではScratch apiの都合で動きません。)  
+Thumbnail will be changed once in 1000 seconds. I recoomend you to run this on replit or something to run 24/7.(It doesn't work on Replit due to scratch api's problems.)  
+
+## Credit
+[https://dummyimage.com](https://dummyimage.com) - instant image generating tool
