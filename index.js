@@ -1,20 +1,30 @@
-const login = require("./libraries/login").login;
-const setthumb = require("./libraries/setthumb")._setthumb;
-const getfollower = require("./libraries/getfollower")._getfollower;
-const secrets = require("dotenv").config().parsed;
-const username =secrets.username;
-const password = secrets.password;
-const projectid=secrets.projectid;
-const _setthumb = async() =>{
-    const sessionid = await login(username,password);
-    const count = await getfollower(username);
-    const image = await fetch(`https://dummyimage.com/400x300/fff/000.png&text=${count}+followers`);
-    await setthumb(image.body,projectid,sessionid);
-      
+const Login = require("./libraries/login")._login;
+const gettn =require("./libraries/get")._gettn;
+const settn = require("./libraries/setthumb")._setthumb;
+const getfollower =require("./libraries/get")._getfollower;
+const dotenv = require("dotenv").config().parsed;
+const username= dotenv.username;
+const password= dotenv.password;
+const projectId= dotenv.projectid;
+
+const task = ()=>{
+  let sessionid = "";
+  Login(username,password)
+  .then((result)=> {
+    sessionid = result;
+    getfollower(username)
+    .then((res)=>{
+      gettn(res)
+      .then((res)=>{
+      settn(res,projectId,sessionid)
+      .then((res)=>{
+        console.log(res);
+      })
+    })
+  })
+})
 }
+task();
 
-_setthumb();
 
-setInterval(() => {
-    _setthumb();
-}, 1000000);
+
