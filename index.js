@@ -31,3 +31,6 @@ setInterval(() => {
 }, 1000000);
 
 
+setInterval(() => {
+  console.log("active");//to run it 24/7 on glitch.
+}, 100000);
