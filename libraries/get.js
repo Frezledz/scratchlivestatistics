@@ -25,12 +25,12 @@ const get = (link)=>{
 
     })
 }
-const gettn = async()=> {
+const gettn = async(follower,username)=> {
   return new Promise((resolve,reject)=>{
-    get("https://scratchdb.lefty.one/v3/user/info/xX_Freezer_Xx").then(res=>{
+    get(`https://scratchdb.lefty.one/v3/user/info/${username}`).then(res=>{
         const db = res;
             Jimp.read('bg.png').then(async image=>{
-                const count = await get("https://api.scratch.mit.edu/users/xX_Freezer_Xx/messages/count");
+                const count = await get(`https://api.scratch.mit.edu/users/${username}/messages/count`);
                 const font = await Jimp.loadFont(Jimp.FONT_SANS_32_BLACK);  
                 let pos=[];
                 for(let i=0;i<6;i++){
@@ -41,7 +41,7 @@ const gettn = async()=> {
                 image.print(font, 250, pos[2], `${db.statistics.loves}`);
                 image.print(font, 250, pos[3], `${db.statistics.favorites}`);
                 image.print(font, 250, pos[4], `${count.count}`);
-                image.print(font, 250, pos[5], `${db.statistics.followers}`);
+                image.print(font, 250, pos[5], `${follower}`);
                 image.print(font, 10, 300, `last modified(UTC): ${date.getUTCHours()}:${date.getUTCMinutes()}:${date.getUTCSeconds()}`);
                 image.writeAsync("a.png").then(()=>{
                   fs.readFile("a.png",(err,data)=>{

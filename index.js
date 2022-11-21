@@ -12,12 +12,12 @@ const task = ()=>{
   .then((result)=> {
     const sessionid = result;
     getfollower(username)
-    .then((res=>gettn(res)))
+    .then((res=>gettn(res,username)))
     .then(res=>settn(res,projectId,sessionid))
     .then(res=>console.log(res));
 })
 }
-task();
+task();//Run this function periodic if you want to change periodic.
 
 
 const http = require("http");

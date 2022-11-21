@@ -20,8 +20,7 @@ projectid=yourprojectid
 ## LICENCE  
 MIT Licence.
 ## NOTE
-1000秒に1回の頻度で変更されます。サーバー上で24時間実行させておくといいでしょう。(Replit上ではScratch apiの都合で動きません。)  
-Thumbnail will be changed once in 1000 seconds. I recoomend you to run this on Heroku or something to run 24/7.(It doesn't work on Replit due to scratch api's problems.)  
-
+起動すると一度だけ変更されます。定期的に変更したいならindex.js上でSetintervalの中で関数を実行すればいいでしょう。  
+It will change the thumbnail ONLY ONCE when you start up. If you want to change it periodic, go to index.js and setinterval the function specified(or other way you know))
 ## Credit
 Jimp
