@@ -1,7 +1,5 @@
-const https = require('https');
 const Jimp = require("jimp");
-
-
+const https = require("https");
 const get = (link)=>{
     return new Promise((resolve)=>{
         https.get(link, (resp)=>{
@@ -23,7 +21,7 @@ const get = (link)=>{
 
     })
 }
-const gettn = async()=> {
+const main = async()=> {
     get("https://scratchdb.lefty.one/v3/user/info/xX_Freezer_Xx").then(res=>{
         const db = res;
             Jimp.read('bg.png').then(async image=>{
@@ -46,43 +44,4 @@ const gettn = async()=> {
     })
 
 }
-
-
-const jsdom = require("jsdom");
-const {JSDOM} = jsdom;
-
-const fetch = (username)=>{
-  return new Promise((resolve)=>{
-      https.get(`https://scratch.mit.edu/users/${username}/followers/`,(resp)=>{
-          let chunks = [];
-          resp.on('data', (chunk) => {
-          
-              chunks.push(chunk);
-            }).on("end",()=>{
-              const data = Buffer.concat(chunks);
-              const reg = Buffer.from(data,"utf-8").toString();
-              resolve(reg);
-            })
-      });
-  })
-}
-
-const parse = (data)=>{
-  return new Promise((resolve)=>{
-      const html = data;
-      const document = new JSDOM(html);
-      const followertext = document.window.document.querySelector("h2").textContent;
-      const follower = followertext.match(/[0-9]+/g)[0];
-      resolve(follower);
-      })
-
-}
-const func = (username)=>{
-  return new Promise((resolve)=>{
-      fetch(username).then((resp)=>{parse(resp).then((res)=>{resolve(res)})});
-
-  })
-}
-
-exports._getfollower = func;
-exports._gettn=gettn;
+  main();
