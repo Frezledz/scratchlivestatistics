@@ -36,12 +36,12 @@ const gettn = async(follower,username)=> {
                 for(let i=0;i<6;i++){
                     pos.push(85+i*33);
                 }
-                image.print(font, 250, pos[0], `${db.statistics.followers}`);
+                image.print(font, 250, pos[0], `${follower}`);
                 image.print(font, 250, pos[1], `${db.statistics.views}`);
                 image.print(font, 250, pos[2], `${db.statistics.loves}`);
                 image.print(font, 250, pos[3], `${db.statistics.favorites}`);
                 image.print(font, 250, pos[4], `${count.count}`);
-                image.print(font, 250, pos[5], `${follower}`);
+                image.print(font, 250, pos[5], `${db.statistics.ranks.followers}`);
                 image.print(font, 10, 300, `last modified(UTC): ${date.getUTCHours()}:${date.getUTCMinutes()}:${date.getUTCSeconds()}`);
                 image.writeAsync("a.png").then(()=>{
                   fs.readFile("a.png",(err,data)=>{
