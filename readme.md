@@ -21,6 +21,6 @@ projectid=yourprojectid
 MIT Licence.
 ## NOTE
 起動すると一度だけ変更されます。定期的に変更したいならindex.js上でSetintervalの中で関数を実行すればいいでしょう。  
-It will change the thumbnail ONLY ONCE when you start up. If you want to change it periodic, go to index.js and setinterval the function specified(or other way you know))
+It will change the thumbnail ONLY ONCE when you start up. If you want to change it periodic, go to index.js and setinterval the function specified(or other way you know)
 ## Credit
 Jimp
