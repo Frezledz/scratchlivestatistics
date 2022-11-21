@@ -7,30 +7,21 @@ const username= dotenv.username;
 const password= dotenv.password;
 const projectId= dotenv.projectid;
 
-const task = ()=>{
-  let sessionid = "";
+const task = ()=>{  
   Login(username,password)
   .then((result)=> {
-    sessionid = result;
+    const sessionid = result;
     getfollower(username)
-    .then((res)=>{
-      gettn(res)
-      .then((res)=>{
-      settn(res,projectId,sessionid)
-      .then((res)=>{
-        console.log(res);
-      })
-    })
-  })
+    .then((res=>gettn(res)))
+    .then(res=>settn(res,projectId,sessionid))
+    .then(res=>console.log(res));
 })
 }
 task();
 
-setInterval(() => {
-    task();
-}, 1000000);
 
-
-setInterval(() => {
-  console.log("active");//to run it 24/7 on glitch.
-}, 100000);
+const http = require("http");
+http.createServer(function(req, res) {
+    res.write("nothing here u donkey");
+    res.end();
+  }).listen(8080);

@@ -1,5 +1,7 @@
+const fs = require("fs");
 const https = require('https');
 const Jimp = require("jimp");
+const date = new Date();
 
 
 const get = (link)=>{
@@ -24,6 +26,7 @@ const get = (link)=>{
     })
 }
 const gettn = async()=> {
+  return new Promise((resolve,reject)=>{
     get("https://scratchdb.lefty.one/v3/user/info/xX_Freezer_Xx").then(res=>{
         const db = res;
             Jimp.read('bg.png').then(async image=>{
@@ -39,12 +42,19 @@ const gettn = async()=> {
                 image.print(font, 250, pos[3], `${db.statistics.favorites}`);
                 image.print(font, 250, pos[4], `${count.count}`);
                 image.print(font, 250, pos[5], `${db.statistics.followers}`);
-                image.writeAsync("a.png").then(res=>{console.log("done")});
+                image.print(font, 10, 300, `last modified(UTC): ${date.getUTCHours()}:${date.getUTCMinutes()}:${date.getUTCSeconds()}`);
+                image.writeAsync("a.png").then(()=>{
+                  fs.readFile("a.png",(err,data)=>{
+                    resolve(data)
+                  })
+                });
         
             })
 
     })
 
+
+  })
 }
 
 
