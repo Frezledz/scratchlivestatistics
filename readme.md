@@ -1,13 +1,13 @@
-# Scratch Live Follower  
-Scratchのプロジェクトのサムネイルを定期的に変更することによって自分のフォロワー数を表示します。  
-This project will show us LIVE follower count by changing Scratch project's thumbnail periodic.  
+# Scratch Live Statics  
+Scratchのプロジェクトのサムネイルを定期的に変更することによって自分のScratchアカウントの統計を表示します。  
+This project will show us LIVE statistics by changing Scratch project's thumbnail periodic.  
 
 ## requirement
 Node.js (it should work on widely used version./よく使われているバージョンなら大体動くはずです。)
 ## Usage
 1. Download files
 ```
-git clone https://github.com/xxXFreezerXxx/scratchlivefollowers.git
+git clone https://github.com/xxXFreezerXxx/scratchlivestatistics.git
 ```  
 or download zip  
 2. Create `.env`file and edit
@@ -24,4 +24,4 @@ MIT Licence.
 Thumbnail will be changed once in 1000 seconds. I recoomend you to run this on Heroku or something to run 24/7.(It doesn't work on Replit due to scratch api's problems.)  
 
 ## Credit
-[https://dummyimage.com](https://dummyimage.com) - instant image generating tool
+Jimp
