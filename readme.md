@@ -7,7 +7,7 @@ Node.js (it should work on widely used version./よく使われているバー�
 ## Usage
 1. Download files
 ```
-git clone https://github.com/xxXFreezerXxx/scratchlivestatistics.git
+git clone https://github.com/Frezledz/scratchlivestatistics.git
 ```  
 or download zip  
 2. Create `.env`file and edit
